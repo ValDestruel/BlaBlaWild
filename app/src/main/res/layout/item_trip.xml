@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/date_heure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:text="@string/_31_12_1970_03_30_pm"/>
+
+    <TextView
+        android:id="@+id/last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/first_name"
+        android:layout_alignBottom="@+id/first_name"
+        android:layout_marginLeft="8dp"
+        android:layout_toEndOf="@+id/first_name"
+        android:layout_toRightOf="@+id/first_name"
+        android:layout_weight="1"
+        android:text="@string/lastname"/>
+
+    <TextView
+        android:id="@+id/first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/date_heure"
+        android:layout_alignStart="@+id/date_heure"
+        android:layout_below="@+id/date_heure"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:text="@string/firstname"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/date_heure"
+        android:layout_alignBottom="@+id/date_heure"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:text="@string/_19"/>
+</RelativeLayout>
+
+
+
+
+
