@@ -31,7 +31,7 @@ public class TripAdapter extends ArrayAdapter<TripModel> {
                 textLastname.setText(trip.getLastname());
 
                 TextView textDate = convertView.findViewById(R.id.date_heure);
-                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy-hh:mm");
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
                 String dateFormat = sdf.format(trip.getDate());
                 String date = dateFormat + "PM";
                 textDate.setText(date);
