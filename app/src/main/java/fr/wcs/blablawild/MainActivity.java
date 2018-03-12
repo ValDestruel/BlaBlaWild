@@ -37,6 +37,15 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(search);
             }
         });
+
+        final Button buttonSearch = findViewById(R.id.button_searchVehicle);
+        buttonSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent searchVehicle = new Intent(MainActivity.this, VehicleActivity.class);
+                MainActivity.this.startActivity(searchVehicle);
+            }
+        });
     }
 
     @Override

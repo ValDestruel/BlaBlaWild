@@ -39,8 +39,5 @@ public class ItinerarySearchActivity extends AppCompatActivity {
 
             }
         });
-
-
-
     }
 }
