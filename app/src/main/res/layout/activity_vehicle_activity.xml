@@ -20,7 +20,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/brand"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/auto_spinner" />
 
@@ -33,7 +33,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/model"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_Brand" />
 
@@ -46,7 +46,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/kilometers"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_Model" />
 
@@ -55,12 +55,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hours"
         android:inputType="textPersonName"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText_Kilometers" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_Kilometers" />
 
     <Button
         android:id="@+id/button_Send"
@@ -68,21 +69,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/send"
         android:enabled="false"
+        android:text="@string/send"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Hours" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_Speed" />
 
     <EditText
         android:id="@+id/editText_Speed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/speed"
-        android:visibility="invisible"
+        android:inputType="textPersonName"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/editText_Hours"
-        app:layout_constraintTop_toTopOf="@+id/editText_Hours" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_Hours" />
 
 
 </android.support.constraint.ConstraintLayout>

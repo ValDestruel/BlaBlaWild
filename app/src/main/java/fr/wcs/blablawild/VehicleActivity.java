@@ -36,20 +36,18 @@ public class VehicleActivity extends AppCompatActivity {
                     case 0:
                         editBrand.setVisibility(View.VISIBLE);
                         editModel.setVisibility(View.VISIBLE);
-                        editKilometers.setVisibility(View.INVISIBLE);
-                        editHours.setVisibility(View.INVISIBLE);
-                        editSpeed.setVisibility(View.INVISIBLE);
-                        buttonSend.setTranslationY(-158);
+                        editKilometers.setVisibility(View.GONE);
+                        editHours.setVisibility(View.GONE);
+                        editSpeed.setVisibility(View.GONE);
                         break;
 
                     case 1:
                         editBrand.setVisibility(View.VISIBLE);
                         editModel.setVisibility(View.VISIBLE);
                         editKilometers.setVisibility(View.VISIBLE);
-                        editHours.setVisibility(View.INVISIBLE);
-                        editSpeed.setVisibility(View.INVISIBLE);
+                        editHours.setVisibility(View.GONE);
+                        editSpeed.setVisibility(View.GONE);
                         buttonSend.setEnabled(true);
-                        buttonSend.setTranslationY(-20);
 
                         buttonSend.setOnClickListener(new View.OnClickListener() {
 
@@ -71,12 +69,10 @@ public class VehicleActivity extends AppCompatActivity {
                     case 2:
                         editBrand.setVisibility(View.VISIBLE);
                         editModel.setVisibility(View.VISIBLE);
-                        editKilometers.setVisibility(View.INVISIBLE);
+                        editKilometers.setVisibility(View.GONE);
                         editHours.setVisibility(View.VISIBLE);
-                        editSpeed.setVisibility(View.INVISIBLE);
+                        editSpeed.setVisibility(View.GONE);
                         buttonSend.setEnabled(true);
-                        buttonSend.setTranslationY(-20);
-
 
                         buttonSend.setOnClickListener(new View.OnClickListener() {
 
@@ -98,12 +94,10 @@ public class VehicleActivity extends AppCompatActivity {
                     case 3:
                         editBrand.setVisibility(View.VISIBLE);
                         editModel.setVisibility(View.VISIBLE);
-                        editKilometers.setVisibility(View.INVISIBLE);
-                        editHours.setVisibility(View.INVISIBLE);
+                        editKilometers.setVisibility(View.GONE);
+                        editHours.setVisibility(View.GONE);
                         editSpeed.setVisibility(View.VISIBLE);
                         buttonSend.setEnabled(true);
-                        buttonSend.setTranslationY(-20);
-
 
                         buttonSend.setOnClickListener(new View.OnClickListener() {
 
