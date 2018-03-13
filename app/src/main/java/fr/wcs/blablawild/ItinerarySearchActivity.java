@@ -63,9 +63,11 @@ public class ItinerarySearchActivity extends AppCompatActivity {
 
                 EditText editDeparture = findViewById(R.id.edit_departure);
                 EditText editDestination = findViewById(R.id.edit_destination);
+                EditText editDate = findViewById(R.id.edit_date);
 
                 String departure = editDeparture.getText().toString();
                 String destination = editDestination.getText().toString();
+                String date = editDate.getText().toString();
 
                 if ((departure.length() == 0) || (destination.length() == 0)) {
                     Toast.makeText(ItinerarySearchActivity.this, "Please fill your Departure and your Destination", Toast.LENGTH_SHORT).show();
@@ -73,8 +75,8 @@ public class ItinerarySearchActivity extends AppCompatActivity {
 
                 else {
                     Intent search = new Intent(ItinerarySearchActivity.this, ItineraryListActivity.class);
-                    search.putExtra("test1", departure);
-                    search.putExtra("test2", destination);
+                    SearchModel parcelable = new SearchModel(departure, destination, date);
+                    search.putExtra("Parcelable", parcelable);
                     ItinerarySearchActivity.this.startActivity(search);
                 }
 

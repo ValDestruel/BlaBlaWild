@@ -1,9 +1,10 @@
 package fr.wcs.blablawild;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -15,10 +16,10 @@ public class ItineraryListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itinerary_list);
 
-        Intent reception = getIntent();
-        String reception1 = reception.getStringExtra("test1");
-        String reception2 = reception.getStringExtra("test2");
-        setTitle(reception1 + " >> " + reception2);
+        SearchModel reception = getIntent().getExtras().getParcelable("Parcelable");
+        setTitle(reception.getDeparture() + " >> " + reception.getDestination());
+
+        Toast.makeText(this, reception.getDate(), Toast.LENGTH_SHORT).show();
 
         ListView listTrip = findViewById(R.id.list_view);
         ArrayList<TripModel> results = new ArrayList<>();
