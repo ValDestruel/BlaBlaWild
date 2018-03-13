@@ -44,7 +44,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:hint="@string/kilometers"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hours"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_Kilometers" />
@@ -82,7 +82,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/speed"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/editText_Hours"
         app:layout_constraintTop_toBottomOf="@+id/editText_Hours" />

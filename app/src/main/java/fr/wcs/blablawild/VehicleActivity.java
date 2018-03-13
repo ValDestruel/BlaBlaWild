@@ -58,11 +58,18 @@ public class VehicleActivity extends AppCompatActivity {
                                 String brandString = editBrand.getText().toString();
                                 String modelString = editModel.getText().toString();
                                 String kilometers = editKilometers.getText().toString();
-                                int kilometersValue = Integer.valueOf(kilometers);
 
-                                VehicleCar carResult = new VehicleCar(brandString, modelString, kilometersValue);
+                                if (kilometers.equals("") || brandString.equals("") || modelString.equals("")) {
+                                    Toast.makeText(VehicleActivity.this, "Please fill in all the fields", Toast.LENGTH_SHORT).show();
+                                }
 
-                                Toast.makeText(VehicleActivity.this, carResult.getDescription(), Toast.LENGTH_SHORT).show();
+                                else {
+                                    int kilometersValue = Integer.valueOf(kilometers);
+
+                                    VehicleCar carResult = new VehicleCar(brandString, modelString, kilometersValue);
+
+                                    Toast.makeText(VehicleActivity.this, carResult.getDescription(), Toast.LENGTH_SHORT).show();
+                                }
                             }
                         });
                         break;
@@ -83,11 +90,18 @@ public class VehicleActivity extends AppCompatActivity {
                                 String brandString = editBrand.getText().toString();
                                 String modelString = editModel.getText().toString();
                                 String hours = editHours.getText().toString();
-                                int hoursValue = Integer.valueOf(hours);
 
-                                VehicleBoat boatResult = new VehicleBoat(brandString, modelString, hoursValue);
+                                if (hours.equals("") || brandString.equals("") || (modelString.equals(""))) {
+                                    Toast.makeText(VehicleActivity.this, "Please fill in all the fields", Toast.LENGTH_SHORT).show();
+                                }
 
-                                Toast.makeText(VehicleActivity.this, boatResult.getDescription(), Toast.LENGTH_SHORT).show();
+                                else{
+                                    int hoursValue = Integer.valueOf(hours);
+
+                                    VehicleBoat boatResult = new VehicleBoat(brandString, modelString, hoursValue);
+
+                                    Toast.makeText(VehicleActivity.this, boatResult.getDescription(), Toast.LENGTH_SHORT).show();
+                                }
                             }
                         });
                         break;
@@ -108,11 +122,18 @@ public class VehicleActivity extends AppCompatActivity {
                                 String brandString = editBrand.getText().toString();
                                 String modelString = editModel.getText().toString();
                                 String speed = editSpeed.getText().toString();
-                                int speedValue = Integer.valueOf(speed);
 
-                                VehiclePlane boatResult = new VehiclePlane(brandString, modelString, speedValue);
+                                if (brandString.equals("") || modelString.equals("") || speed.equals("")) {
+                                    Toast.makeText(VehicleActivity.this, "Please fill in all the fields", Toast.LENGTH_SHORT).show();
+                                }
 
-                                Toast.makeText(VehicleActivity.this, boatResult.getDescription(), Toast.LENGTH_SHORT).show();
+                                else {
+                                    int speedValue = Integer.valueOf(speed);
+
+                                    VehiclePlane boatResult = new VehiclePlane(brandString, modelString, speedValue);
+
+                                    Toast.makeText(VehicleActivity.this, boatResult.getDescription(), Toast.LENGTH_SHORT).show();
+                                }
                             }
                         });
                         break;
